@@ -2,10 +2,11 @@ public class UniDex {
 	int hp = 0;
     int ad = 0;
     int spd = 0;
+    int HP = 0;
 
     UniMon jorgeMon = new UniMon("JorgeMon", "Júnio", 1, 4, 3, 1, 0);
     UniMon arrysonMon = new UniMon("ArrysonMon", "Júnio", 1, 3, 2, 0, 0);
-    UniMon irisMon = new UniMon("Iris", "Júnio", 1, 3, 2, 0, 0);
+    UniMon irisMon = new UniMon("ÍrisMon", "Júnio", 1, 3, 2, 0, 0);
     
     UniMon[] uniDex = new UniMon[] {jorgeMon, arrysonMon, irisMon};
     
@@ -45,6 +46,7 @@ public class UniDex {
         }
         if(hp == 1) { //Up Vida
         	uniDex[esc].setVida(uniDex[esc].getVida() + 2);
+        	HP = uniDex[esc].getVida();
         	hp = 0;
         }
         if(ad == 3) { //Up Dano
@@ -111,9 +113,6 @@ public class UniDex {
    	}
 }
     
-    
-    
-    
     public void ataqueUniTrainer(int player, int trainer, int ataque) { //Nosso dano
     	if(ataque == 1 && uniDex[player].getNivel() >= 1 ) {
     		int novoValorVida = uniDexTrainer[trainer].getVida() - uniDex[player].getDano();
@@ -139,6 +138,14 @@ public class UniDex {
     	if(ataque == 1 && uniDexMestre[mestre].getNivel() >= 1 ) {
     		int novoValorVida = uniDex[player].getVida() - uniDexMestre[mestre].getDano();
             uniDex[player].setVida(novoValorVida);
+    	}
+    }
+    
+    public void curarVida(int player) {
+    	if(uniDex[player].getVida() < HP) {
+    		uniDex[player].setVida(HP);
+    	}else {
+    		uniDex[player].setVida(uniDex[player].getVida());
     	}
     }
     

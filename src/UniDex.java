@@ -4,11 +4,11 @@ public class UniDex {
     int spd = 0;
     int HP = 0;
 
-    UniMon jorgeMon = new UniMon("JorgeMon", "Júnio", 1, 4, 3, 1, 0);
-    UniMon arrysonMon = new UniMon("ArrysonMon", "Júnio", 1, 3, 2, 0, 0);
-    UniMon irisMon = new UniMon("ÍrisMon", "Júnio", 1, 3, 2, 0, 0);
+    UniMon jorgeMon = new UniMon("JorgeMon", "Júnio", 1, 3, 2, 1, 0);
+    UniMon arrysonMon = new UniMon("ArrysonMon", "Júnio", 1, 2, 4, 0, 0);
+    UniMon irisMon = new UniMon("ÍrisMon", "Júnio", 1, 4, 2, 0, 0);
     
-    UniMon[] uniDex = new UniMon[] {jorgeMon, arrysonMon, irisMon};
+    UniMon[] uniDex = new UniMon[] {jorgeMon, irisMon, arrysonMon};
     
     UniMonTrainer vitorMon = new UniMonTrainer("VitorMon", "Júnio", 1, 2, 3, 0, 0); 
     UniMonTrainer anthonyMon = new UniMonTrainer("AnthonyMon", "Júnio", 0, 0, 0, 0, 0); 

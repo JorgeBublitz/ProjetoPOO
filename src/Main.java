@@ -16,9 +16,10 @@ public class Main {
     	System.out.println("--------------------------------------------------------------------");
     	
     	System.out.print("\nDigite qual UniMon deseja: ");
-    	String UniMonEsc = scan.nextLine();
-    	
+    	int UniMonEsc = scan.nextInt();
+    
     	System.out.println("\n--------------------------------------------------------------------");
+    	fala.falaInicial3(nomePlayer,UniMonEsc - 1);
     	System.out.println("--------------------------------------------------------------------");
     }
 }

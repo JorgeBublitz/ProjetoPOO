@@ -42,7 +42,21 @@ public class Falas {
 	        }
 	    }
 	}
-	public void falaInicial3() {
-		String[] texto = new String[] {""}
+	public void falaInicial3(String nomePlayer, int nomeMon) {
+		
+		UniDex nome = new UniDex();
+		String[] texto = new String[] {"Boa escolha " + nomePlayer + "... espero que ( " + nome.uniDex[nomeMon].getNome() + " ) te ajude na sua jornada no mundo de Unipe...\n", 
+										"Agora vá... verei você em breve.\n"};
+		
+		for (String frase : texto) {
+	        for (int i = 0; i < frase.length(); i++) {
+	            System.out.print(frase.charAt(i));
+	            try {
+	                Thread.sleep(1); // Atraso de 100 milissegundos entre caracteres
+	            } catch (InterruptedException e) {
+	                e.printStackTrace();
+	            }
+	        }
+		}
 	}
 }

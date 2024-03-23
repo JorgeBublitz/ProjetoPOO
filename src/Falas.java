@@ -1,5 +1,6 @@
 
 public class Falas {
+	
 	public void falaInicial() {
 		String[] texto = new String[] {
 		        " Bem-vindo ao mundo dos Unimon! Meu nome é Professor Leo.\n"

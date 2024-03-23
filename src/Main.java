@@ -44,7 +44,7 @@ public class Main {
 					 AQUI QUE VOCÊ IRA FAZER O SEXO, CARALHO
 					 */
 
-					if(uniMon.uniDex[uniMonEsc].getVida() == 0){
+					if(uniMon.uniDex[uniMonEsc].getVida() == 0){ 
 						System.out.println("");
 					}
 

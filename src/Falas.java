@@ -47,9 +47,9 @@ public class Falas {
 	public void falaInicial3(String nomePlayer, int nomeMon) {
 		
 		UniDex nome = new UniDex();
-		String[] texto = new String[] {"Boa escolha " + nomePlayer + "... espero que ( " + nome.uniDex[nomeMon - 1].getNome() + " ) te ajude na sua jornada no mundo de Unipe...\n", 
+		String[] texto = new String[] {"Boa escolha " + nomePlayer + "... espero que ( " + nome.uniDex[nomeMon].getNome() + " ) te ajude na sua jornada no mundo de Unipe...\n", 
 										"Agora vá... verei você em breve.\n" ,
-										"Jájá vai aparecer o seu rival, BOA SORTE!"
+										"Jájá vai aparecer o seu rival, BOA SORTE!\n"
 										
 									
 									

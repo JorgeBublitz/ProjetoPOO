@@ -15,7 +15,7 @@ public class UniDex {
     UniMonTrainer elionMon = new UniMonTrainer("ElionMon", "Júnio", 1, 3, 1, 1, 0); 
     UniMonTrainer kaikeMon = new UniMonTrainer("KaikeMon", "Júnio", 1, 5, 2, 0, 0); 
     
-    UniMonTrainer[] uniDexTrainer = new UniMonTrainer[] {vitorMon, anthonyMon, elionMon};
+    UniMonTrainer[] uniDexTrainer = new UniMonTrainer[] {vitorMon, anthonyMon, elionMon, kaikeMon};
     
     UniMonMestre emersonMon = new UniMonMestre("KerneyMon", "Sênior", 6, 14, 2, 3); 
     UniMonMestre danielMon = new UniMonMestre("PhpMon", "Sênior", 8, 18, 4, 3);

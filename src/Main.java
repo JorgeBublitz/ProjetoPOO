@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.swing.JProgressBar;
+
 public class Main {
     public static void main(String[] args) {
     	
@@ -54,7 +56,19 @@ public class Main {
 				System.out.println("--------------------------------------------------------------------\n");
 				fala.falaInicial4();
 				System.out.println("--------------------------------------------------------------------\n\n\n");
-				batalhas.batalha(uniMonEsc);
+				boolean vida = true;
+				while(vida){
+					batalhas.batalha(uniMonEsc, 3);
+					if(uniMon.uniDex[uniMonEsc].getVida() == 0){
+						System.out.println("HAHAHA perdeu...");
+						vida = false;
+					}else if(uniMon.uniDexTrainer[3].getVida() == 0){
+						System.out.println("Não acredito que perdi...");
+						uniMon.levelUp(uniMonEsc, 10);
+						vida = false;
+					}
+				}
+				System.out.println("Impre");
 			}
 			break;
 			case 2:{

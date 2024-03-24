@@ -11,7 +11,6 @@ public class Menu {
         System.out.println("|    1 - Golpe              2 - Bolsa    |\n");
         System.out.println("------------------------------------------\n");
     }
-
     public void menuGolpesJorge(){
         System.out.println("---------------- GolpeMon ----------------\n");
         System.out.println("|    1 - ERRO              2 - Coringada |\n");

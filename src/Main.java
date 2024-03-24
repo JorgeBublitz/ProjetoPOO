@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
     	
     	Scanner scan = new Scanner(System.in);
+		Batalha batalhas = new Batalha();
 		UniDex uniMon = new UniDex();
 		Creditos creditos = new Creditos();
     	Falas fala = new Falas();
@@ -42,88 +43,36 @@ public class Main {
 		
 		boolean jogoAndamento = true;
 		boolean batalha = true;
-		int uniMonBat = 0;
-		vere = true;
 
-		while (jogoAndamento) {
-			System.out.println("--------------------------------------------------------------------\n");
-			menu.menu();
-			int menuEsc = scan.nextInt();
-			switch (menuEsc) {
-				
-				case 1:{	
-					System.out.println("--------------------------------------------------------------------\n");
-					fala.falaInicial4();
-					System.out.println("--------------------------------------------------------------------\n\n\n");
-
-					while (batalha) { 
-						menu.menuBatalha();
-						vere = true; 
-					
-						while (vere) {
-							System.out.print("\nO que vai fazer: ");
-							uniMonBat = scan.nextInt();
-							if (uniMonBat != 1 && uniMonBat != 2) {
-								System.out.println("Opção Inválida!!");
-								vere = true;
-							} else {
-								vere = false; 
-							}
-						}
-
-						if(uniMonBat == 1){
-							if(uniMonEsc == 1){
-								menu.menuGolpesJorge();
-								int atq = scan.nextInt();
-								switch (atq) {
-									case 1:
-										System.out.println(uniMon.uniDex[uniMonEsc].getNome() + " usou ERRO");
-										uniMon.uniDexTrainer[3].setVida(uniMon.uniDexTrainer[3].getVida() - uniMon.uniDex[uniMonEsc].getDano() + 2);
-										System.out.println(uniMon.uniDexTrainer[3].getVida());
-										break;
-								
-									default:
-										break;
-								}
-							}
-
-						}
-
-						if(uniMon.uniDex[uniMonEsc].getVida() == 0 || uniMon.uniDexTrainer[3].getVida() == 0){
-							if(uniMon.uniDexTrainer[3].getVida() == 0){ 
-								System.out.println("Nem acredito que você me ganhou, bom... te vejo depois, vá para o CT...");
-								batalha = false;
-							}else{
-								System.out.println("Eu sou inevitável. HAHAHA... Treine mais, e talvez alcançará 1% do meu poder.");
-								batalha = false;
-							}
-						}
-					}
-
-				}
-					
-					break;
-
-				case 2:{
-					creditos.creditos();
-				}
-					
-				
-				break;
-	
-				case 3:{
-					System.out.println("Encerrando o UniMon!");
-					System.exit(0);
-				}
-				break;
-	
-				default:{
-					System.out.println("Opção invalida");
-					scan.nextLine();
-				}
-					break;
-				}
+		
+		System.out.println("--------------------------------------------------------------------\n");
+		menu.menu();
+		int menuEsc = scan.nextInt();
+		switch (menuEsc) {
+			
+			case 1:{	
+				System.out.println("--------------------------------------------------------------------\n");
+				fala.falaInicial4();
+				System.out.println("--------------------------------------------------------------------\n\n\n");
+				batalhas.batalha(uniMonEsc);
 			}
+			break;
+			case 2:{
+				creditos.creditos();
+			}
+			break;
+
+			case 3:{
+				System.out.println("Encerrando o UniMon!");
+				System.exit(0);
+			}
+			break;
+
+			default:{
+				System.out.println("Opção invalida");
+				scan.nextLine();
+			}
+			break;
 		}
     }
-
+}
